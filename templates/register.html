@@ -1,0 +1,14 @@
+{% extends 'main_page.html' %}
+{% block body %}
+    {% from "/include/form_helpers.html" import render_field %}
+    <h3>KAYIT OLUN</h3>
+    <hr>
+    <form method = "post"> 
+            {{ render_field(form.name,class = "form-control") }}
+            {{ render_field(form.e_mail,class = "form-control") }}
+            {{ render_field(form.username,class = "form-control") }}
+            {{ render_field(form.password,class = "form-control") }}
+            {{ render_field(form.re_password,class = "form-control") }}
+            <button type="submit" class="btn btn-dark">Kayıt Ol</button>
+    </form>
+{% endblock %}

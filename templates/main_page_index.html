@@ -1,0 +1,26 @@
+{% extends 'main_page.html' %}
+{% block  body%}
+    <div class="jumbotron text-center">
+        <h3>BLOGUMUZA HOŞGELDİNİZ</h3>
+        <br>
+        <p>Bu blogda yazılım geliştiriciler olarak birbirlerinizden faydalanabilir ve soru ve sorunlarını paylaşıp çözümler bulabilirsiniz.</p>
+    </div>
+    <ul>
+            {% for i in inf %}
+                <li>
+                    ID:{{i.id}}-
+                    NAME:{{i.name}}-
+                    CONTENT:{{i.content}}
+                </li>
+            {% endfor %}
+    </ul>
+    <!--
+    {% if answer == "yes" %}
+        <p>ANSWER = YES</p>
+    {% elif answer == "no" %}
+        <p>ANSWER = NO</p>
+    {% else %}
+        <p>ANSWER = NO</p>
+    {% endif %}
+    -->
+{% endblock  %}

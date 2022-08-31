@@ -1,0 +1,14 @@
+{% extends "main_page.html" %}
+    {% block body %}
+        {% if article%}
+            <h4>{{article.title}}</h4>
+            <hr>
+            YAZAR: {{article.author}}
+            <hr>
+            TARİH: {{article.created_date}}
+            <hr>
+            {{article.content | safe}}            
+        {% else %}
+            <div class = "alert alert-warning">BÖYLE BİR MAKALE BULUNMAMAKTADIR.</div>
+        {% endif %}
+    {% endblock  %}
